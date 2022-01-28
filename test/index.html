@@ -1,0 +1,339 @@
+<!--Created by & code by: Justin Ross-->
+<!--Free for public use-->
+<!--HTML-CSS-JavaScript is free to the Public per owner Justin L. Ross January 2022 | github.com/rythorian77 | pseudo name: Lucian Patterson-->
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Authentication Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fresca&display=swap" rel="stylesheet">
+
+    <style>
+
+/*>>> If I removed ring1-ring2-ring3-ring4, you would find a vertical column of exploding fire on the left side<<<*/
+.ring1
+{
+  position  : absolute;
+  font-size : 20pt;
+  visibility: hidden;
+}
+
+.ring2
+{
+  position  : absolute;
+  font-size : 15pt;
+  visibility : hidden;
+}
+
+.ring3
+{
+  position  : absolute;
+  font-size : 12pt;
+  visibility : hidden;
+}
+
+.ring4
+{
+  position  : absolute;
+  font-size : 10pt;
+  visibility : hidden;
+}
+
+/*Console Text Effect*/
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+body {
+  background: black;
+}
+.hidden {
+  opacity:0;
+}
+
+.console-container {
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height:200px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:50;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+/* New overlay appearance on hover */
+.overlay-image:hover .hover {
+  opacity: 1;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+.container5{
+  padding: 1em 0;
+  float: left;
+  width: 100%;
+}
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 640px){
+  .container{
+    width: 33.33333%;
+  }
+}
+
+.container5 .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container5">
+        <h3 class="title"></h3>
+        <div class="content">
+            <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="sim.jpg">
+                <div class="content-details fadeIn-top">
+                    <h1 style="color:white;font-size:45px;margin-top:-90px;" >The Possibilities Are Endless for Web Designs </h1>
+                    <p style="font-size:20px;margin-top:150px ;padding-top:15px;" >Open Your Mind To New Ideas</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Console Text-->
+    <div style="padding-top:-90px;" class='console-container'><span id='text'></span>
+        <div class='console-underscore' id='console'>&#95;</div>
+    </div>
+
+
+</header>
+
+
+<div id="div1" class="ring1"><img src="giphy.gif"></div>
+<div id="div2" class="ring2"><img src="giphy.gif"></div>
+<div id="div3" class="ring3"><img src="giphy.gif"></div>
+<div id="div4" class="ring4"><img src="giphy.gif"></div>
+
+</body>
+
+<script>
+//Free to the Public per Justin L. Ross January 2022 | github.com/rythorian77 | pseudo name: Lucian Patterson
+
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body
+var nav = (!document.all || window.Opera);
+var tmr = null;
+var spd = 60;
+var x = 5;
+var x_offset = 7;
+var y = 5;
+var y_offset = 17;
+
+document.onmousemove = get_mouse;
+
+function get_mouse(e)
+{
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft;
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop;
+  x += x_offset;
+  y += y_offset;
+  wave(1);
+}
+
+function wave(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px'
+				document.getElementById('div'+n).style.left=x+'px'
+				document.getElementById('div'+n).style.visibility='visible'
+    n++;
+    tmr=setTimeout("wave("+n+")",spd);
+  }
+  else
+  {
+     clearTimeout(tmr);
+     fade(4);
+  }
+}
+
+function fade(n)
+{
+  if(n>0)
+  {
+				document.getElementById('div'+n).style.visibility='hidden'
+    n--;
+    tmr=setTimeout("fade("+n+")",spd);
+  }
+  else clearTimeout(tmr);
+}
+</script>
+
+<script>
+//This line below allows you to change the introduction text that you see in blue >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>blue can be changed
+ consoleText(['Special Effects','Can Bring Attention','To Your Website','I Hope You Enjoy'], 'text', ['blue']);
+
+  function consoleText(words, id, colors) {
+    if (colors === undefined) colors = ['#fff'];
+    var visible = true;
+    var con = document.getElementById('console');
+    var letterCount = 1;
+    var x = 1;
+    var waiting = false;
+    var target = document.getElementById(id)
+    target.setAttribute('style', 'color:' + colors[0])
+    window.setInterval(function() {
+
+      if (letterCount === 0 && waiting === false) {
+        waiting = true;
+        target.innerHTML = words[0].substring(0, letterCount)
+        window.setTimeout(function() {
+          var usedColor = colors.shift();
+          colors.push(usedColor);
+          var usedWord = words.shift();
+          words.push(usedWord);
+          x = 1;
+          target.setAttribute('style', 'color:' + colors[0])
+          letterCount += x;
+          waiting = false;
+        }, 1000)
+      } else if (letterCount === words[0].length + 1 && waiting === false) {
+        waiting = true;
+        window.setTimeout(function() {
+          x = -1;
+          letterCount += x;
+          waiting = false;
+        }, 1000)
+      } else if (waiting === false) {
+        target.innerHTML = words[0].substring(0, letterCount)
+        letterCount += x;
+      }
+    }, 120)
+    window.setInterval(function() {
+      if (visible === true) {
+        con.className = 'console-underscore hidden'
+        visible = false;
+
+      } else {
+        con.className = 'console-underscore'
+
+        visible = true;
+      }
+    }, 200)
+  }
+</script>
+
+<script>
+
+</script>
+
+</html>
